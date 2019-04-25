@@ -1,0 +1,74 @@
+{
+  "projects": [
+    {
+      "date": "2019/01/09",
+      "projectsPerDate": [
+        {
+          "id": 1,
+          "name": "Golden Wings",
+          "time": 3600,
+          "users": [
+            {
+              "id": 2,
+              "name": "Bogdan"
+            },
+            {
+              "id": 3,
+              "name": "Mladen"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Sacret Life",
+          "time": 4800,
+          "users": [
+            {
+              "id": 1,
+              "name": "Andrija"
+            },
+            {
+              "id": 2,
+              "name": "Bogdan"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2019/03/29",
+      "projectsPerDate": [
+        {
+          "id": 1,
+          "name": "Golden Wings",
+          "time": 7200,
+          "users": [
+            {
+              "id": 2,
+              "name": "Bogdan"
+            },
+            {
+              "id": 3,
+              "name": "Mladen"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Sacret Life",
+          "time": 7200,
+          "users": [
+            {
+              "id": 1,
+              "name": "Andrija"
+            },
+            {
+              "id": 2,
+              "name": "Bogdan"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

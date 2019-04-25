@@ -1,0 +1,85 @@
+@import "base/reset", "base/typography";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "abstracts/_variables.scss", "abstracts/mixins";
+@import "themes/custom-theme";
+@import "components/_dc-date-picker.scss";
+
+* {
+  box-sizing: border-box;
+  font-family: $font;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  font-size: 100%;
+}
+
+html {
+
+}
+
+body {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  outline: 0;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+}
+
+.mat-icon {
+  cursor: pointer;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+mat-calendar-header{
+
+  .mat-calendar-header{
+    padding-top: 0;
+
+    .mat-calendar-controls{
+      margin-top:0;
+
+    }
+  }
+}
+
+
+.mat-calendar-body-cell-content {
+  font-size: 12px;
+  font-family: 'Source Sans Pro', sans-serif;
+
+  .mat-button-wrapper{
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+}
+
+.mat-dialog-container{
+  .dialog-header{
+    text-align: right;
+    font-size: 12px;
+  }
+}
+
+
+

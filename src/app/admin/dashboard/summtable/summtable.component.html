@@ -1,0 +1,45 @@
+
+<div class="table-wrapper">
+
+  <div class="table-header">
+    <i class="material-icons" (click)="onPreviousMonth()" style="cursor: pointer;">chevron_left</i>
+    <h2>{{tableMonthDisplay}} {{currentYear}}</h2>
+    <i class="material-icons" (click)="onNextMonth()" style="cursor: pointer;">chevron_right</i>
+  </div>
+
+  <div class="mytable">
+
+    <table mat-table id="style-8" [dataSource]="dataSource" class="mat-elevation-z8" >
+
+      <ng-container  *ngFor="let dCol of userIdNameArr" matColumnDef={{dCol[0]}}>
+
+        <th mat-header-cell *matHeaderCellDef  [ngClass]=" {stickyHeader: dCol[1] == 'date', empty: dCol[0] == 'empty_info' }"
+            (click)="onName(dCol[0], dCol[1])">{{dCol[1] | titlecase}}
+        <div>({{getTotalTime(dCol[0])}}) </div>
+        </th>
+
+        <td  mat-cell *matCellDef="let element, let i =index"
+
+            [ngClass]="{ weekend: ( (element['date']).substring(0,3) == 'Sun' || (element['date']).substring(0,3) == 'Sat' ),
+           dateColumn: dCol[0]=='date', searchDay: element['date'].substring(4,6) == searchDay,
+            holiday: holiday(element['date'].substring(4,6))
+           }"
+            id="{{element['date'].substring(4,6)}}_{{dCol[0]}}"
+
+            (click)="openDialog($event,element[dCol[0]])"
+
+        > {{element[dCol[0]]}} </td>
+
+        <!--<td mat-footer-cell *matFooterCellDef> {{getTotalTime(dCol[0])}} </td>-->
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumnsByIds; sticky: true " ></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumnsByIds"></tr>
+      <!--<tr mat-footer-row *matFooterRowDef="displayedColumnsByIds"></tr>-->
+    </table>
+
+
+
+  </div>
+</div>
+

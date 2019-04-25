@@ -1,0 +1,26 @@
+
+
+<div class="dialog-container">
+  <div class="dialog-header">
+    <small>{{data.date}} {{data.month}}</small>
+  </div>
+
+  <h1 mat-dialog-title>Hi, </h1>
+  <div mat-dialog-content>
+    <p>What's your favorite animal?</p>
+    <mat-form-field>
+      <input matInput
+
+      >
+    </mat-form-field>
+  </div>
+  <p>Overall: {{data.overall}}</p>
+
+  <div mat-dialog-actions>
+    <button mat-flat-button color="primary" (click)="onNoClick()">OK</button>
+  </div>
+
+
+</div>
+
+

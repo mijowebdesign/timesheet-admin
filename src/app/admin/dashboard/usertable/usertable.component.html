@@ -1,0 +1,43 @@
+
+<div class="table-wrapper" >
+
+  <div class="table-header">
+    <i class="material-icons" (click)="onPreviousMonth()" style="cursor: pointer;">chevron_left</i>
+    <h2>{{tableMonthDisplay}} {{currentYear}}</h2>
+    <i class="material-icons" (click)="onNextMonth()" style="cursor: pointer;">chevron_right</i>
+    <div class="buttons-wrapper">
+      <button class="user" mat-button >User: {{userName | titlecase}}</button>
+      <button mat-stroked-button (click)="onAllUsers()">All Users</button>
+    </div>
+  </div>
+
+  <div class="mytable">
+    <table mat-table [dataSource]="userDataSource" class="mat-elevation-z8" >
+
+      <ng-container  *ngFor="let dCol of userProjects" matColumnDef={{dCol}}>
+        <th mat-header-cell *matHeaderCellDef  [ngClass]=" {stickyHeader: dCol == 'date', empty: dCol == 'empty_info'  }"> {{dCol | titlecase}}
+          <div>({{getTotalTime(dCol)}})</div>
+        </th>
+
+        <td mat-cell *matCellDef="let element"
+            [ngClass]="{ weekend: ( (element['date']).substring(0,3) == 'Sun' || (element['date']).substring(0,3) == 'Sat' ),
+             holiday: holiday(element['date'].substring(4,6)),
+             freeDays: freeDays(element['date'].substring(4,6)),
+             sickDays: sickDays(element['date'].substring(4,6)),
+             outOfOffice: outOfOfficeDays(element['date'].substring(4,6) ),
+            dateColumn: dCol=='date'}" id="{{element['date']}}"> {{element[dCol]}}
+        </td>
+
+        <!--<td mat-footer-cell *matFooterCellDef> {{getTotalTime(dCol)}} </td>-->
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="userProjects; sticky: true " ></tr>
+      <tr mat-row *matRowDef="let row; columns:userProjects"></tr>
+      <!--<tr mat-footer-row *matFooterRowDef="userProjects"></tr>-->
+    </table>
+  </div>
+</div>
+
+
+
+

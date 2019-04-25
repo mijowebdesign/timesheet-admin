@@ -1,0 +1,228 @@
+@import '../../../../assets/sass/abstracts/variables';
+
+
+
+.table-wrapper {
+
+  margin-top: 100px;
+  padding: 0 20px 0 20px;
+  background-color: $white;
+  border: 1px solid #F1F1F1;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px $div-shadow;
+
+
+
+
+  .table-header{
+
+    text-align: center;
+    margin-top: 36px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    position: relative;
+
+    h2{
+      text-align: center;
+      color: #3B86FF;
+      font-size:16px;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: bold;
+      margin-left: 40px;
+      margin-right: 40px;
+      //width:200px;
+
+    }
+
+    .buttons-wrapper {
+      position: absolute;
+      right: 0;
+
+
+      button {
+        margin-left: 5px;
+        font-weight: bold;
+        color: #3B86FF;
+        &.user{
+          //cursor: auto;
+          pointer-events:none;
+
+
+
+
+        }
+      }
+    }
+
+  }
+
+  .mytable{
+
+    min-width:50vw;
+    height: 70vh;
+    overflow: auto;
+    border: 1px solid #EAF0F4;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    &::-webkit-scrollbar-track
+    {
+      border: 1px solid $table-header;
+      background-color: $table-header;
+    }
+
+    &::-webkit-scrollbar
+    {
+      width: 4px;
+      background-color: #A3A6B4;
+    }
+
+    &::-webkit-scrollbar-thumb
+    {
+      background-color: #A3A6B4;
+    }
+
+
+
+
+  }
+
+  table.mat-elevation-z8 {
+
+    box-shadow: 0px 3px 6px $div-shadow;
+
+    .mat-header-row {
+      background-color:$table-header;
+
+    }
+
+    .stickyHeader{
+      position: sticky;
+      left: 0;
+      z-index: +1000;
+    }
+
+    th.mat-header-cell {
+      height: 3rem;
+      //min-width:230px;
+      width: 8.125rem;
+      color: $gray;
+      font-size: 15px;
+      text-align: center;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: bold;
+      padding-left: 0;
+      padding-right: 0;
+      border-left: 1px solid #d8d9dd;
+
+      &:first-of-type{
+        z-index: 4000 !important;
+        width: 78px;
+
+      }
+      &.empty {
+        width:1200px;
+      }
+
+
+
+    }
+
+    @media screen and(max-width: 980px) {
+      .th.mat-header-cell  {
+        max-width: 80px;
+      }
+    }
+
+    .mat-footer-row {
+      font-family: 'Source Sans Pro', sans-serif;
+      text-align: center;
+      font-weight: bold;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .mat-cell{
+      font-family: 'Source Sans Pro', sans-serif;
+      transition: box-shadow 100ms;
+      text-align: center;
+
+      padding-left: 0;
+      padding-right: 0;
+      font-weight: bold;
+      border-left: 1px solid #d8d9dd;
+
+
+      &:hover{
+
+
+      }
+
+      &.weekend{
+        background-color:$table-header;
+
+      }
+
+      &.freeDays {
+        //background-color: rgba(187, 222, 251, 0.7);
+        background-color: $freeDays;
+      }
+
+      
+      &.holiday{
+        //background-color: rgba(255,238,88, 0.7);
+        background-color: $holiday;
+
+      }
+
+      &.sickDays{
+        //background-color:rgba(255,138,101, 0.7);
+        background-color:$sickDays;
+
+      }
+
+      &.outOfOffice{
+        //background-color: rgba(197,225,165, 0.7);
+        background-color: $outOfOffice;
+
+      }
+
+      &.dateColumn{
+
+        font-weight: normal;
+        width: 78px;
+        //position: sticky;
+        left:0;
+        z-index: 1000;
+        //background-color: white;
+
+
+        &.weekend{
+          background-color:$table-header;
+        }
+
+
+
+        &:hover {
+          box-shadow:0 0 0;
+          border-radius: 0;
+          cursor: auto;
+        }
+
+      }
+    }
+
+    .mat-footer-row{
+      &:first-child{
+        position: sticky;
+        left:0px;
+        //background-color: blue;
+      }
+    }
+
+  };
+
+}

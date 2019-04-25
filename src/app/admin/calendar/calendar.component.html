@@ -1,0 +1,23 @@
+<!--<mat-form-field>-->
+  <!--<input matInput [matDatepicker]="picker" >-->
+  <!--<mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>-->
+  <!--<mat-datepicker #picker opened="true"></mat-datepicker>-->
+<!--</mat-form-field>-->
+
+<div class="calendar-container">
+  <div class="calendar-wrapper">
+    <mat-calendar *ngIf="canRender"
+      #calendar
+      [selected]="selectedDate"
+      (selectedChange)="onSelect($event)"
+      (monthSelected)="monthSelected($event)"
+      (yearSelected)="chosenYearHandler($event)"
+      style="font-family: 'Source Sans Pro', sans-serif"
+      [startAt]="startDate"
+    ></mat-calendar>
+  </div>
+</div>
+
+
+<!--[dateClass]="calendarService.dateClass"-->
+

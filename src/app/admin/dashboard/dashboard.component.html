@@ -1,0 +1,35 @@
+<div class="container">
+
+  <div class="calendar-wrapper">
+    <app-calendar ></app-calendar>
+
+
+    <div id="colors_for_special_dates">
+
+      <div class="color_meanings">
+        <div class="color_box holiday"></div>
+        <h4>Holidays</h4>
+      </div>
+      <div class="color_meanings">
+        <div class="color_box sick_leaves"></div>
+        <h4>Sick leaves</h4>
+      </div>
+      <div class="color_meanings">
+        <div class="color_box free_days"></div>
+        <h4>Free days</h4>
+      </div>
+      <div class="color_meanings">
+        <div class="color_box out_of_office"></div>
+        <h4>Out of office</h4>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="timesheet-wrapper">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

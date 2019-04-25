@@ -1,0 +1,92 @@
+$white: #f8f8f8; // rgb(247, 247, 247)
+$orange: #ff5722; // rgb(255, 87, 34)
+$blue: #4285f4; // rgb(66, 133, 244)
+$green: #528266; // rgb(82, 130, 102)
+$gray: #747474; // rgb(116, 116, 116)
+$gray-light: #95989B; // rgba(149, 152, 155)
+$gray-extra-light: #dfdfdf; // rgb(223, 223, 223)
+
+//----mijo
+
+$black: #000000;
+$table-header:#F5F6FA;
+$gray: #A3A6B4;
+
+$box-shadow: lighten($black, 72%);
+$div-shadow: lighten($black, 84%);
+
+$freeDays: rgba(187, 222, 251, 0.7);
+$holiday: rgba(255,238,88, 0.7);
+$sickDays: rgba(255,138,101, 0.7);
+$outOfOffice: rgba(197,225,165, 0.7);
+
+//-----
+
+$font: 'Roboto';
+$font-light: 'Roboto-Light';
+$font-medium: 'Roboto-Medium';
+$font-bold: 'Roboto-Bold';
+
+
+$custom-blue: (
+  50 : #e8f0fe,
+  100 : #c6dafc,
+  200 : #a1c2fa,
+  300 : #7baaf7,
+  400 : #5e97f6,
+  500 : #4285f4,
+  600 : #3c7df3,
+  700 : #3372f1,
+  800 : #2b68ef,
+  900 : #1d55ec,
+  A100 : #ffffff,
+  A200 : #eef2ff,
+  A400 : #bbcbff,
+  A700 : #a1b8ff,
+  contrast: (50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+));
+
+$custom-orange: (
+  50 : #ffebe4,
+  100 : #ffcdbd,
+  200 : #ffab91,
+  300 : #ff8964,
+  400 : #ff7043,
+  500 : #ff5722,
+  600 : #ff4f1e,
+  700 : #ff4619,
+  800 : #ff3c14,
+  900 : #ff2c0c,
+  A100 : #ffffff,
+  A200 : #fff7f6,
+  A400 : #ffc9c3,
+  A700 : #ffb2a9,
+  contrast: (50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+));
+

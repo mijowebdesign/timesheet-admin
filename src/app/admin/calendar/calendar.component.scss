@@ -1,0 +1,38 @@
+@import '../../../assets/sass/abstracts/variables.scss';
+
+
+.calendar-container{
+
+  margin-top: 100px;
+
+
+  .calendar-wrapper{
+
+    background-color: #FFFFFF;
+    //padding: 30px 30px 30px 30px;
+    padding: 5%;
+    border:1px solid #FFFFFF;
+    box-shadow: 0 3px 6px $div-shadow;
+    border-radius: 10px;
+
+  }
+
+  .mat-calendar {
+
+    .mat-calendar-body-cell-content{
+
+      font-family:'Source Sans Pro', sans-serif;
+      font-size: 10px;
+
+    }
+  }
+
+  .example-custom-date-class {
+    background: orange;
+    border-radius: 100%;
+  }
+
+}
+
+
+

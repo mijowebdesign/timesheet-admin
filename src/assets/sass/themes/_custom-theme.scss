@@ -1,0 +1,17 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+// Define the default theme (same as the example above).
+$custom-theme-primary: mat-palette($custom-blue, 500);
+$custom-theme-accent: mat-palette($custom-orange, A200, A100, A400);
+$custom-theme-warn: mat-palette($mat-red, A700);
+
+// Include the default theme styles.
+$custom-theme-dark: mat-dark-theme($custom-theme-primary, $custom-theme-accent, $custom-theme-warn);
+$custom-theme-light: mat-light-theme($custom-theme-primary, $custom-theme-accent, $custom-theme-warn);
+
+@include angular-material-theme($custom-theme-light);
+
+$custom-theme-typography: mat-typography-config($font-family: $font);
+@include angular-material-typography($custom-theme-typography);
